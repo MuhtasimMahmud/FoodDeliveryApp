@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/customerHome">
+
+
+    <fragment
+        android:id="@+id/customerHome"
+        android:name="com.mahmud.myapplication.customerPanel.HomeFragment"
+        android:label="Restaurants"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_customerHome_to_navigation_menu"
+            app:destination="@id/navigation_menu" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/customerCart"
+        android:name="com.mahmud.myapplication.customerPanel.customerCartFragment"
+        android:label="Cart"
+        tools:layout="@layout/fragment_customer_cart" />
+
+    <fragment
+        android:id="@+id/customerProfile"
+        android:name="com.mahmud.myapplication.customerPanel.CustomerProfileFragment"
+        android:label="Own Profile"
+        tools:layout="@layout/fragment_customer_profile" />
+
+    <fragment
+        android:id="@+id/navigation_menu"
+        android:name="com.mahmud.myapplication.menu.MenuFragment"
+        android:label="Menu"
+        tools:layout="@layout/fragment_menu" />
+
+
+</navigation>
